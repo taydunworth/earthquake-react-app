@@ -1,17 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
 .App {
-  background-color: lightgrey;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 300;
+  background-color: #fff;
 }
 
 .title {
-  height: 80px;
-  padding-top: 20px;
-  background-color: black;
+  height: auto;
+  padding: 30px 0;
+  background-color: #fff;
   vertical-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .my-header {
   text-align: center;
-  font-size: 40px;
+  font-size: 60px;
   color: orange;
   text-shadow: 2px 2px 5px grey;
   animation: shake infinite 5s linear;
@@ -36,6 +42,8 @@
 
 .quake-list {
   padding-top: 30px;
+  width: 100%;
+  margin: 0px auto;
 }
 
 .card {
@@ -43,12 +51,59 @@
   margin: 10px;
 }
 
+strong {
+  font-weight: 700;
+}
+
 .earthquake-title {
+  padding: 80px 0;
   color: white;
   text-shadow: 1px 1px 1px black;
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
   height: 200px;
   background-image: url('http://www.sanandreasfault.org/4020_A.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   background-position: center;
+  position: relative;
+  z-index: 0;
+  text-transform: uppercase;
+}
+
+.earthquake-title::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.text-box {
+  z-index: 1;
+}
+
+.card-text {
+  margin: 30px 0;
+  width: 100%;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 3px 0;
+  text-transform: uppercase;
+}
+
+.card-block {
+  margin: 30px 0 10px;
+  text-transform: uppercase;
+}
+
+.card-link {
+  background-color: orange;
+  border-radius: 10px;
+  padding: 10px;
+  color: #000;
+  font-weight: 700;
 }
