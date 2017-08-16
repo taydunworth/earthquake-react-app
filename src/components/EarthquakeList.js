@@ -9,12 +9,12 @@ class EarthquakeList extends Component {
         <div className="col-sm-6" key={earthquake.id}>
           <div className="card">
             <div className="card-block">
-              <h4 className="card-title">{earthquake.title}</h4>
+              <h4 className="card-title">{earthquake.properties.title}</h4>
               <h6 className="card-subtitle mb-2 text-muted">Magnitude: {earthquake.mag}</h6>
               <h6 className="card-subtitle mb-2 text-muted">Time: {moment(earthquake.time).format('llll')}</h6>
               <p className="card-text">Coordinates: {earthquake.coordinates}</p>
 
-              <a href={earthquake.url} className="card-link">USGS Event Link</a>
+              <a href={earthquake.properties.url} className="card-link">USGS Event Link</a>
 
             </div>
           </div>
